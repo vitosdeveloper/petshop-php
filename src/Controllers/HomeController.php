@@ -14,4 +14,14 @@ class HomeController extends Controller
 
     $this->view($data);
   }
+  public function store($param)
+  {
+    $data = [
+      'view' => 'store',
+      'title' => 'store',
+      'param' => $param
+    ];
+
+    $this->view($data);
+  }
 }
