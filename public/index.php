@@ -1,7 +1,7 @@
 <?php
 
+use Routes\Router;
+
 require '../bootstrap.php';
 
-use Controllers\Test;
-
-new Test;
+new Router;
