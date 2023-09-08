@@ -2,24 +2,16 @@
 
 namespace Controllers;
 
+use helpers\SlugHelper;
+
 class HomeController extends Controller
 {
-  public function index($param)
+  public function index()
   {
     $data = [
       'view' => 'home',
-      'title' => 'Home',
-      'param' => $param
-    ];
-
-    $this->view($data);
-  }
-  public function store($param)
-  {
-    $data = [
-      'view' => 'store',
-      'title' => 'store',
-      'param' => $param
+      'title' => 'Home - DogCat Banho e Tosa',
+      'today' => SlugHelper::dateToSlug()
     ];
 
     $this->view($data);

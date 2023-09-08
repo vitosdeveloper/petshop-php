@@ -3,6 +3,9 @@ body,
 h1,
 h2,
 h3,
+h4,
+h5,
+h6,
 p,
 ul,
 ol,
@@ -14,6 +17,7 @@ li {
 body {
   font-family: Arial, sans-serif;
   background-color: #f2f2f2;
+  background: #202124;
 }
 
 header {
@@ -47,15 +51,19 @@ nav li {
 
 h1,
 h2,
-h3 {
-  color: #333;
+h3,
+h4,
+h6,
+h6,
+p {
+  color: #e8eaed;
 }
 
-.button {
+button {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #333;
-  color: #fff;
+  background-color: #303134;
+  color: #e8eaed;
   text-decoration: none;
   border: none;
   border-radius: 5px;
@@ -63,7 +71,7 @@ h3 {
   transition: background-color 0.3s;
 }
 
-.button:hover {
+button:hover {
   background-color: #555;
 }
 
@@ -88,3 +96,62 @@ footer {
     margin-bottom: 10px;
   }
 }
+
+/* content div */
+
+.content {
+  /* border: 1px solid black; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  margin: 2rem 5%;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.home-link {
+  text-decoration: none;
+}
+
+.home-link h1:hover {
+  color: #8e8f91;
+}
+
+/* home */
+
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.home .links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.home .links a {
+  text-decoration: none;
+}
+
+.btn-with-icon {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.btn-icon {
+  font-size: 5rem;
+}
+
+.btn-with-icon h2 {
+  font-size: 2rem;
+  width: 235px;
+  height: 55px;
+}
+
+/* atendimento */

@@ -11,6 +11,9 @@
 
 <body>
   <div class="content">
+    <a class="home-link" href="/">
+      <h1>DogCat Banho e Tosa </h1>
+    </a>
     <?php require VIEWS_PATH . $view . ".php" ?>
   </div>
 </body>
