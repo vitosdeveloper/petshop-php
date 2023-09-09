@@ -127,14 +127,14 @@ footer {
   gap: 2rem;
 }
 
-.home .links {
+.links {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 2rem;
 }
 
-.home .links a {
+.links a {
   text-decoration: none;
 }
 
@@ -155,3 +155,16 @@ footer {
 }
 
 /* atendimento */
+
+.form-for-chart {
+  display: flex;
+  gap: 1rem;
+}
+
+.form-for-chart input[type='date'] {
+  border: 1px solid #303134;
+  background: #202124;
+  color: white;
+  /* height: 32px; */
+  border-radius: 5px;
+}

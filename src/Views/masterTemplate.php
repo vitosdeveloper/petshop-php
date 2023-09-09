@@ -7,6 +7,8 @@
   <title><?php echo $title ?></title>
   <link rel="stylesheet" href="/assets/css/style.css">
   <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 </head>
 
 <body>
