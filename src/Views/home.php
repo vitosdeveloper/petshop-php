@@ -1,4 +1,6 @@
 <div class="home">
+  <h1>Home</h1>
+
   <div class="links">
     <a href="/atendimento/show/<?php echo $today ?>">
       <button class="btn-with-icon">

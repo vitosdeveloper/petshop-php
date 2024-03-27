@@ -12,10 +12,12 @@
 </head>
 
 <body>
-  <div class="content">
+  <header>
     <a class="home-link" href="/">
       <h1>DogCat Banho e Tosa </h1>
     </a>
+  </header>
+  <div class="content">
     <?php require VIEWS_PATH . $view . ".php" ?>
   </div>
 </body>

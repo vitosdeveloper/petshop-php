@@ -12,6 +12,8 @@ class Router
       'home' => Controllers\HomeController::class,
       'notFound' => Controllers\NotFoundController::class,
       'atendimento' => Controllers\AtendimentoController::class,
+      'servicos' => Controllers\ServicosController::class,
+      'historico' => Controllers\HistoricoController::class,
     ];
     $uriArr = RouterUri::getUri();
 

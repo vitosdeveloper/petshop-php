@@ -16,13 +16,15 @@
     </a>
   </div>
 
-  <form action="/atendimento/show/" method="post" class="form-for-chart">
-    <input name="date" type="date" max="<?php echo $dateInputMaxDate ?>" value="<?php echo $dateInputDefaultValue ?>">
-    <button type="submit">Buscar</button>
-  </form>
+  <div class="section-container">
+    <form action="/atendimento/show/" method="post" class="form-for-chart">
+      <input name="date" type="date" max="<?php echo $dateInputMaxDate ?>" value="<?php echo $dateInputDefaultValue ?>">
+      <button type="submit">Buscar</button>
+    </form>
 
-  <div class="chart-container" style="position: relative; height:40vh; width:80vw;">
-    <canvas id="myChart" style="width:80vh;"></canvas>
+    <div class="chart-container" style="position: relative; height:40vh; width:80vw;">
+      <canvas id="myChart" style="width:80vh;"></canvas>
+    </div>
   </div>
 </div>
 
