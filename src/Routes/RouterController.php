@@ -4,7 +4,7 @@ namespace Routes;
 
 class RouterController
 {
-  static public function getController(array $uriArr, array $routes)
+  static public function getController(array $uriArr, array $routes): string
   {
     $controller = $uriArr[0];
     if (!array_key_exists($controller, $routes)) {

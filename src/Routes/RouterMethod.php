@@ -4,7 +4,7 @@ namespace Routes;
 
 class RouterMethod
 {
-  static public function getMethod(array $routes, string $controller, array $uriArr)
+  static public function getMethod(array $routes, string $controller, array $uriArr): string
   {
     $controller = $routes[$controller];
     $method = $uriArr[1];

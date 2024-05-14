@@ -20,7 +20,7 @@
   <div class="content">
     <?php require $view . ".php"; ?>
   </div>
-  <?php if (isset($jsFilename)) echo '<script src="/assets/js/' . $jsFilename . '.js"></script>'; ?>
+  <?php if (isset($jsFilename)) require '../public/assets/js/' . $jsFilename . ".php"; ?>
 </body>
 
 </html>
