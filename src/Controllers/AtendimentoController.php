@@ -6,7 +6,7 @@ use helpers\SlugHelper;
 
 class AtendimentoController
 {
-  public static function show($selectedDate)
+  public static function show(IController $Controller, $selectedDate)
   {
     $selectedDateDateSeparatedByForwardSlash = str_replace('-', '/', $selectedDate);
     $today = SlugHelper::dateToSlug();
@@ -27,6 +27,6 @@ class AtendimentoController
       ]
     );
 
-    Controller::view($data);
+    $Controller::view($data);
   }
 }

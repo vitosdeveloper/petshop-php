@@ -4,10 +4,10 @@ namespace Controllers;
 
 class ServicosController
 {
-  public static function index()
+  public static function index(IController $Controller)
   {
     $data = new ControllerData('servicos', 'Serviços');
 
-    Controller::view($data);
+    $Controller::view($data);
   }
 }

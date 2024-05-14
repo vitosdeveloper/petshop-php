@@ -3,6 +3,7 @@
 namespace Routes;
 
 use Controllers;
+use Controllers\Controller;
 
 class Router
 {
@@ -26,6 +27,6 @@ class Router
       $controller = 'notFound';
     }
 
-    $routes[$controller]::$method($params);
+    $routes[$controller]::$method(new Controller, $params);
   }
 }

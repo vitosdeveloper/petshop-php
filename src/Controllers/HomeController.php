@@ -6,7 +6,7 @@ use helpers\SlugHelper;
 
 class HomeController
 {
-  public static function index()
+  public static function index(IController $Controller)
   {
     $data = new ControllerData(
       'home',
@@ -14,6 +14,6 @@ class HomeController
       ['today' => SlugHelper::dateToSlug()]
     );
 
-    Controller::view($data);
+    $Controller::view($data);
   }
 }

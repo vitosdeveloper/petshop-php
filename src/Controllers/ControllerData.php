@@ -16,7 +16,7 @@ class ControllerData
     $this->extraValues = $extraValues;
   }
 
-  public function getValues(): array
+  public function getData(): array
   {
     return (array) $this;
   }
