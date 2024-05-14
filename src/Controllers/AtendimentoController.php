@@ -4,9 +4,9 @@ namespace Controllers;
 
 use helpers\SlugHelper;
 
-class AtendimentoController extends Controller
+class AtendimentoController
 {
-  public function show($selectedDate)
+  public static function show($selectedDate)
   {
     $selectedDateDateSeparatedByForwardSlash = str_replace('-', '/', $selectedDate);
     $today = SlugHelper::dateToSlug();
@@ -16,14 +16,17 @@ class AtendimentoController extends Controller
     [$selectedDay, $selectedMonth, $selectedYear] = explode('-', $selectedDate);
     $dateInputDefaultValue = "{$selectedYear}-{$selectedMonth}-{$selectedDay}";
 
-    $data = [
-      'title' => 'Atendimento - DogCat Banho e Tosa',
-      'view' => 'atendimento',
-      'selectedDate' => $selectedDateDateSeparatedByForwardSlash,
-      'dateInputMaxDate' => $dateInputMaxDate,
-      'dateInputDefaultValue' => $dateInputDefaultValue
-    ];
+    $data = new ControllerData(
+      'atendimento',
+      'Atendimento - DogCat Banho e Tosa',
+      [
+        'jsFilename' => 'atendimento',
+        'selectedDate' => $selectedDateDateSeparatedByForwardSlash,
+        'dateInputMaxDate' => $dateInputMaxDate,
+        'dateInputDefaultValue' => $dateInputDefaultValue
+      ]
+    );
 
-    $this->view($data);
+    Controller::view($data);
   }
 }

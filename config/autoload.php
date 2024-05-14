@@ -1,12 +1,12 @@
 <?php
 class Autoloader
 {
-  public function register()
+  public static function register()
   {
-    spl_autoload_register(array($this, 'autoload'));
+    spl_autoload_register(array(Autoloader::class, 'autoload'));
   }
 
-  public function autoload($class)
+  public static function autoload($class)
   {
     // Defina o namespace raiz
     $baseDir = __DIR__ . '/../src/';

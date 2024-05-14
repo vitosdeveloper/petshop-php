@@ -2,15 +2,12 @@
 
 namespace Controllers;
 
-class ServicosController extends Controller
+class ServicosController
 {
-  public function index()
+  public static function index()
   {
-    $data = [
-      'title' => 'Serviços',
-      'view' => 'servicos'
-    ];
+    $data = new ControllerData('servicos', 'Serviços');
 
-    $this->view($data);
+    Controller::view($data);
   }
 }

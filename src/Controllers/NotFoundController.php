@@ -2,15 +2,15 @@
 
 namespace Controllers;
 
-class NotFoundController extends Controller
+class NotFoundController
 {
-  public function index()
+  public static function index()
   {
-    $data = [
-      'title' => '404 - Not found',
-      'view' => 'notFound'
-    ];
+    $data = new ControllerData(
+      'notFound',
+      '404 - Not found'
+    );
 
-    $this->view($data);
+    Controller::view($data);
   }
 }

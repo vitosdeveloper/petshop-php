@@ -2,15 +2,15 @@
 
 namespace Controllers;
 
-class HistoricoController extends Controller
+class HistoricoController
 {
-  public function index()
+  public static function index()
   {
-    $data = [
-      'title' => 'Histórico',
-      'view' => 'historico'
-    ];
+    $data = new ControllerData(
+      'historico',
+      'Histórico'
+    );
 
-    $this->view($data);
+    Controller::view($data);
   }
 }

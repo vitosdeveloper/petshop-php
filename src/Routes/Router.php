@@ -6,7 +6,7 @@ use Controllers;
 
 class Router
 {
-  public function __construct()
+  public static function init()
   {
     $routes = [
       'home' => Controllers\HomeController::class,
@@ -26,6 +26,6 @@ class Router
       $controller = 'notFound';
     }
 
-    (new $routes[$controller])->$method($params);
+    $routes[$controller]::$method($params);
   }
 }

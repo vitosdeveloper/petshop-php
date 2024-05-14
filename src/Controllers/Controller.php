@@ -4,9 +4,12 @@ namespace Controllers;
 
 class Controller
 {
-  protected function view(array $data)
+  public static function view(ControllerData $data)
   {
-    extract($data);
+    $controllerData = $data->getValues();
+    $controllerExtraData = $controllerData['extraValues'];
+    extract($controllerData);
+    if (count($controllerExtraData) > 0) extract($controllerExtraData);
     require VIEWS_PATH . "masterTemplate.php";
   }
 }

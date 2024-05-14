@@ -6,7 +6,6 @@ use Controllers;
 
 class RouterUri
 {
-
   static private function isHomeWithoutUri()
   {
     $uri = $_SERVER['REQUEST_URI'];
